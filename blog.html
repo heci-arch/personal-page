@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用 AI Agent 辅助搭建个人主页 | 技术博客</title>
+  <meta name="description" content="算法基础课程技术博客：使用 AI Agent 辅助搭建个人主页的实践记录与思考。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="blog-page">
+  <div class="site-bg" aria-hidden="true">
+    <span class="glow glow-a"></span>
+    <span class="glow glow-b"></span>
+    <span class="grid-layer"></span>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="index.html#home" aria-label="返回首页">
+      <span class="brand-mark">AL</span>
+      <span>Algorithm Home</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="打开导航菜单" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#notes">Learning Notes</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="article-shell">
+    <article class="article-card reveal">
+      <a class="back-link" href="index.html#blog">← 返回首页</a>
+      <header class="article-header">
+        <div class="blog-meta">
+          <span>2026-05-11</span>
+          <span>8 min read</span>
+          <span>Algorithm Course</span>
+        </div>
+        <h1>使用 AI Agent 辅助搭建个人主页：一次算法基础大作业实践</h1>
+        <p>这篇博客记录我如何借助 AI Agent 完成算法基础课程个人主页，从需求理解、页面设计到实现调试，也整理了我对 AI 辅助编程的一些真实感受。</p>
+        <div class="tags">
+          <span>AI Agent</span>
+          <span>Web Development</span>
+          <span>Algorithm Course</span>
+          <span>Learning Reflection</span>
+        </div>
+      </header>
+
+      <nav class="toc" aria-label="文章目录">
+        <strong>目录</strong>
+        <a href="#why">1. 为什么要搭建个人主页</a>
+        <a href="#tools">2. 使用的工具与技术</a>
+        <a href="#process">3. 实现过程</a>
+        <a href="#agent">4. AI Agent 在项目中的作用</a>
+        <a href="#thinking">5. 我的思考</a>
+        <a href="#summary">6. 总结</a>
+      </nav>
+
+      <section id="why">
+        <h2>1. 为什么要搭建个人主页</h2>
+        <p>在学习算法基础这门课之前，我对“个人主页”的理解比较简单：它可能只是一个展示姓名、项目和联系方式的网页。但真正开始做这个作业之后，我发现个人主页也可以成为一个学习整理工具。</p>
+        <p>算法学习中有很多概念并不是看一遍就能真正掌握，例如复杂度分析、动态规划状态设计、图算法中的遍历方式等。如果只是把笔记放在本地文件夹里，时间久了很容易散掉。把这些内容整理到网页上，会迫使我用更清楚的结构表达自己的理解。</p>
+        <blockquote>个人主页不仅是展示结果的地方，也可以是记录过程、训练表达和沉淀知识的空间。</blockquote>
+      </section>
+
+      <section id="tools">
+        <h2>2. 使用的工具与技术</h2>
+        <p>这次项目采用静态网页实现，重点不是追求复杂框架，而是让页面结构清晰、内容可访问、后续容易修改。</p>
+        <ul>
+          <li><strong>AI Agent：</strong>用于辅助分析需求、生成页面结构、优化样式和检查交互细节。</li>
+          <li><strong>HTML / CSS / JavaScript：</strong>用于实现首页、博客页、响应式布局和基础动态效果。</li>
+          <li><strong>Git：</strong>适合后续进行版本管理，记录每一次修改过程。</li>
+          <li><strong>Markdown：</strong>适合先组织博客内容，再转换成网页正文。</li>
+          <li><strong>GitHub Pages / Vercel / Netlify：</strong>可以用于部署静态网站，让主页能够被正常访问。</li>
+        </ul>
+        <pre><code>index.html  →  个人主页
+blog.html   →  第一篇技术博客
+style.css   →  全站视觉样式
+script.js   →  导航与滚动动画</code></pre>
+      </section>
+
+      <section id="process">
+        <h2>3. 实现过程</h2>
+        <p>实现时我先把课程要求拆成两个核心目标：第一，主页本身要像一个完整的个人作品；第二，主页必须能明确跳转到第一篇技术博客。围绕这两个目标，我把首页分成 Hero、About、Projects、Learning Notes、Blog Preview 和 Contact 几个区域。</p>
+        <p>确定结构后，再统一设计蓝色科技感的视觉风格。主页背景使用浅蓝渐变、细网格和柔和光斑，卡片采用半透明玻璃效果，按钮和标签使用蓝色渐变。这样可以保持计算机方向的科技感，同时避免过度花哨。</p>
+        <p>最后添加博客入口、测试页面跳转，并检查移动端布局。相比一开始直接写代码，先拆需求再实现会更稳，也更容易判断页面是否满足作业要求。</p>
+      </section>
+
+      <section id="agent">
+        <h2>4. AI Agent 在项目中的作用</h2>
+        <p>AI Agent 在这个项目中主要承担了“开发助手”的角色。它可以帮助我把课程 PDF 和作业提示词转化成更具体的页面结构，也能快速生成初版代码，减少重复劳动。</p>
+        <p>具体来说，AI 主要帮助完成了这些工作：</p>
+        <ul>
+          <li>整理页面结构和功能模块；</li>
+          <li>生成 HTML、CSS 和 JavaScript 初稿；</li>
+          <li>优化卡片、按钮、时间线等视觉样式；</li>
+          <li>补充响应式布局和滚动出现动画；</li>
+          <li>检查博客入口、返回首页等链接是否合理。</li>
+        </ul>
+        <p>但我也意识到，AI 生成的内容不能直接等于最终作品。网站内容和最终修改仍然需要自己检查，包括文字是否符合自己的表达、页面是否真的清楚、博客是否有个人理解。AI 更像是提高效率的工具，而不是替代思考的工具。</p>
+      </section>
+
+      <section id="thinking">
+        <h2>5. 我的思考</h2>
+        <p>这次作业让我发现，AI Agent 很适合帮助完成重复性和结构化的开发任务。例如搭建页面框架、补充基础样式、生成响应式布局，这些工作如果完全手写会比较耗时，而 AI 可以快速给出一个可运行版本。</p>
+        <p>但是，真正决定网站质量的仍然是人的审美、判断和修改能力。尤其是个人主页这种项目，页面是否符合自己的风格、博客内容是否真实、有无个人理解，都需要自己不断调整。AI 可以把我从空白页面带到初版作品，但不能替我决定什么内容值得保留。</p>
+        <p>我觉得比较好的方式是：先让 AI 帮助搭出结构，再由自己检查逻辑、修改措辞、调整视觉细节。这样既能利用工具提高效率，也能保留个人表达。</p>
+      </section>
+
+      <section id="summary">
+        <h2>6. 总结</h2>
+        <p>通过这次算法基础大作业，我完成了一个包含个人介绍、项目展示、学习记录和技术博客入口的个人主页，也完成了第一篇关于 AI Agent 辅助开发的技术博客。</p>
+        <p>这次实践让我学会了如何用 AI Agent 辅助开发网页，理解了个人主页的基本结构，也对 AI 辅助编程有了更具体的认识。对我来说，最大的收获不是生成了多少代码，而是学会了如何把需求拆清楚、把学习过程表达出来，并在工具帮助下完成一个可以继续扩展的作品。</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer compact">
+    <p>© 2026 王博绪 · 算法基础课程大作业</p>
+    <a href="index.html#home">返回个人主页</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
