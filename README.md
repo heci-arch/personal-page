@@ -1,4 +1,4 @@
-# 算法基础个人主页
+# 个人主页
 
 这是“算法基础”课程大作业个人主页静态网站，包含首页和第一篇技术博客。
 
@@ -14,23 +14,12 @@ README.md    # 运行与部署说明
 
 ## 本地运行
 
-方式一：直接双击 `index.html` 打开。
+直接双击 `index.html` 打开。
 
-方式二：在当前目录启动本地服务器：
 
-```bash
-python -m http.server 8000
-```
+## 部署
 
-然后访问：
-
-```text
-http://localhost:8000/
-```
-
-## 部署建议
-
-可以部署到 GitHub Pages、Vercel 或 Netlify。静态网站不需要后端服务，上传这些文件即可。
+部署到了 GitHub Pages。静态网站不需要后端服务，上传这些文件即可。
 
 GitHub Pages 简要流程：
 
@@ -39,14 +28,6 @@ GitHub Pages 简要流程：
 3. 在仓库 Settings 中开启 Pages；
 4. 将生成的网址填写到作业报告中。
 
-## 需要替换的信息
-
-- `你的姓名`
-- `your.email@example.com`
-- `https://github.com/your-github`
-- 项目卡片中的真实项目链接
-- 博客中的个人表达和真实实现细节
-- 部署后的主页网址
 
 ## 已实现功能
 
